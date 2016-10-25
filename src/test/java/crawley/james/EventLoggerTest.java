@@ -15,6 +15,7 @@ public class EventLoggerTest {
     public void debugTest () {
 
         log.setLoggingLevel("debug");
+        log.emptyLog();
         log.debug("Debug");
         log.info("Info");
         log.warn("Warn");
@@ -27,6 +28,7 @@ public class EventLoggerTest {
     public void infoTest () {
 
         log.setLoggingLevel("info");
+        log.emptyLog();
         log.debug("Debug");
         log.info("Info");
         log.warn("Warn");
@@ -39,6 +41,7 @@ public class EventLoggerTest {
     public void warnTest () {
 
         log.setLoggingLevel("warn");
+        log.emptyLog();
         log.debug("Debug");
         log.info("Info");
         log.warn("Warn");
@@ -51,6 +54,7 @@ public class EventLoggerTest {
     public void errorTest () {
 
         log.setLoggingLevel("error");
+        log.emptyLog();
         log.debug("Debug");
         log.info("Info");
         log.warn("Warn");
