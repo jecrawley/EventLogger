@@ -16,6 +16,7 @@ public class BadEventLoggerTest {
     public void debugTest () {
 
         badLog.setLoggingLevel("debug");
+        badLog.emptyLog();
         badLog.debug("Debug");
         badLog.info("Info");
         badLog.warn("Warn");
@@ -28,6 +29,7 @@ public class BadEventLoggerTest {
     public void infoTest () {
 
         badLog.setLoggingLevel("info");
+        badLog.emptyLog();
         badLog.debug("Debug");
         badLog.info("Info");
         badLog.warn("Warn");
@@ -40,6 +42,7 @@ public class BadEventLoggerTest {
     public void warnTest () {
 
         badLog.setLoggingLevel("warn");
+        badLog.emptyLog();
         badLog.debug("Debug");
         badLog.info("Info");
         badLog.warn("Warn");
@@ -52,6 +55,7 @@ public class BadEventLoggerTest {
     public void errorTest () {
 
         badLog.setLoggingLevel("error");
+        badLog.emptyLog();
         badLog.debug("Debug");
         badLog.info("Info");
         badLog.warn("Warn");

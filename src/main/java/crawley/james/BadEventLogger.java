@@ -17,38 +17,64 @@ public class BadEventLogger {
 
         if (instance == null) {
 
-            return new BadEventLogger();
-        } else {
-            return instance;
+            instance = new BadEventLogger();
+
         }
+
+        return instance;
 
     }
 
     public void debug (String message) {
 
+        if (loggingLevel.equals("debug")) {
+            log.append(message);
+            log.append("\n");
+        }
+
     }
 
     public void info (String message) {
 
+        if (loggingLevel.equals("debug") || loggingLevel.equals("info")) {
+            log.append(message);
+            log.append("\n");
+        }
     }
 
     public void warn (String message) {
+
+        if (!loggingLevel.equals("error")) {
+            log.append(message);
+            log.append("\n");
+        }
 
     }
 
     public void error (String message) {
 
+        log.append(message);
+        log.append("\n");
     }
 
     public void setLoggingLevel (String level) {
 
+        loggingLevel = level;
     }
 
     public String getLog () {
-        return null;
+        int length = log.length();
+        return log.delete(length - 1, length).toString();
+    }
+
+    public void emptyLog () {
+        log = new StringBuilder();
     }
 
     public void printLog () {
+
+
+        System.out.println(log.toString());
 
     }
 }
